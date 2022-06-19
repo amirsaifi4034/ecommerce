@@ -1,20 +1,30 @@
 import React from 'react';
 import Link from 'next/link';
 import {Stack} from 'react-bootstrap';
+import styles from "./styles/Header.module.css";
 
 
-export const StripCard = () => {
+export const StripCard = (props) => {
   return (
     <>
-        <Stack direction="horizontal" gap={3}>
-            <div className="text-white">
-                <Link href="mail: Support@gmail.com"><a className="text-white">Support@gmail.com</a></Link>
-            </div>
-            <div className="text-white"> | </div>
-            <div className="text-white">
-                <Link href="tel: 9990949278"><a className="text-white">9990949278</a></Link>
-            </div>
-        </Stack>
+    {props.StripCardprops.map(stripsCard=>
+
+      <Stack key={stripsCard} direction="horizontal" className={`${props.addClasse ? styles.socialHeader : ''}`} gap={3}>
+      <div>
+          <Link href="#"><a className="text-white"> {stripsCard.firstDiv} </a></Link>
+      </div>
+      <div>
+        <Link href="#"><a className="text-white"> {stripsCard.secondDiv}</a></Link>
+      </div>
+      <div>
+          <Link href="#"><a className="text-white"> {stripsCard.thirdDiv} </a></Link>
+      </div>
+      <div>
+          <Link href="#"><a className="text-white"> {stripsCard.fourthDiv} </a></Link>
+      </div>
+      </Stack>
+
+      )}
     </>
   )
 }

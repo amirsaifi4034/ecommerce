@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Header from '../components/globals/header/Header';
+import Home_top from '../components/home_top_banner/Home_top';
+import Product_category from '../components/product_category/Product_category';
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
        <Header />
+       <Home_top />
+       <Product_category />
       </>
   )
 }
