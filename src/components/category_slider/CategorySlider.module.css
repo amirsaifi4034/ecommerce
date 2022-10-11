@@ -1,0 +1,10 @@
+
+.cateImage {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.cateImage img {
+    width: auto;
+}
